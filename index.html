@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Science & Engineering Solutions, LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: "Open Sans", Arial, sans-serif;
       color: #212529;
       background-color: #f8f9fa;
       line-height: 1.7;
@@ -16,106 +16,112 @@
 
     /* NAVIGATION */
     nav {
-      background: #0b3c5d;
-      padding: 15px 30px;
-      position: sticky;
+      position: fixed;
       top: 0;
+      width: 100%;
+      background: rgba(10, 44, 68, 0.95);
+      padding: 14px 40px;
       z-index: 1000;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
-      gap: 25px;
       align-items: center;
+      justify-content: center;
     }
 
-    nav ul li a {
-      color: #ffffff;
+    nav a {
+      color: white;
       text-decoration: none;
+      margin: 0 16px;
       font-weight: 600;
-      font-size: 0.95rem;
+      letter-spacing: 0.5px;
     }
 
-    nav ul li a:hover {
+    nav a:hover {
       text-decoration: underline;
     }
 
-    /* HEADER */
+    /* HERO */
     header {
-      background: #0b3c5d;
+      background:
+        linear-gradient(rgba(10,44,68,0.85), rgba(10,44,68,0.85)),
+        url("image-1.png") center / cover no-repeat;
       color: white;
+      padding: 140px 20px 120px;
       text-align: center;
-      padding: 90px 20px;
+    }
+
+    header img {
+      max-width: 180px;
+      margin-bottom: 25px;
     }
 
     header h1 {
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+      font-size: 1.3rem;
+      opacity: 0.95;
     }
 
-    /* SECTIONS */
     section {
       max-width: 1100px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 90px 25px;
     }
 
-    section h2 {
+    h2 {
       color: #0b3c5d;
-      font-size: 2rem;
       margin-bottom: 20px;
     }
 
     /* LEADERSHIP */
-    .leader {
-      margin-bottom: 40px;
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
     }
 
-    .leader h3 {
-      margin-bottom: 5px;
-      color: #0b3c5d;
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    /* PRODUCTS */
-    ul.products {
-      padding-left: 20px;
+    .card img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
     }
 
-    /* FOOTER */
     footer {
       background: #0b3c5d;
       color: white;
       text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
+      padding: 30px 15px;
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAV -->
 <nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#leadership">Leadership Team</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#leadership">Leadership Team</a>
+  <a href="#products">Products</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
 </nav>
 
-<!-- HOME -->
+<!-- HERO -->
 <header id="home">
+  <img src="Logo-1.png" alt="SES Logo">
   <h1>Science & Engineering Solutions, LLC</h1>
   <p>Scientific • Engineering • Research Consulting</p>
 </header>
@@ -124,26 +130,14 @@
 <section id="about">
   <h2>About Us</h2>
   <p>
-    Science & Engineering Solutions, LLC (SEALLC) provides scientific,
-    engineering, and research consulting services to industry, academia,
-    and public-sector clients. Our work delivers data-driven,
-    technically rigorous solutions to complex environmental and
-    analytical challenges.
+    Science & Engineering Solutions, LLC (SEALLC) provides specialized technical,
+    analytical, and training services focused on microplastics and nanoplastics
+    in environmental and biological samples.
   </p>
-
   <p>
-    With more than a decade of academic research experience in
-    microplastics and emerging chemicals of concern, we witnessed
-    firsthand the growing challenges faced by industry and by water
-    and wastewater utilities in addressing microplastic pollution
-    and its potential impacts on water and food safety.
-  </p>
-
-  <p>
-    As regulatory interest intensified and the need for reliable
-    analytical methods increased, it became clear that a gap existed
-    between cutting-edge scientific knowledge and the practical tools
-    available to environmental professionals and industries.
+    Our mission is to empower water and wastewater utilities, research groups,
+    and analytical laboratories with the tools and expertise needed to accurately
+    detect, quantify, and reduce microplastic pollution.
   </p>
 </section>
 
@@ -151,67 +145,48 @@
 <section id="leadership">
   <h2>Leadership Team</h2>
 
-  <div class="leader">
-    <h3>Dr. Alexander Ccanccapa Cartagena, PhD</h3>
-    <p>
-      Founder & Principal Scientist. Expert in environmental toxicology,
-      analytical chemistry, and mass spectrometry with extensive experience
-      in microplastics, emerging contaminants, method development,
-      and regulatory-oriented research.
-    </p>
-  </div>
+  <div class="team">
+    <div class="card">
+      <img src="Alex.jpeg" alt="Alex">
+      <h3>Alexander Ccanccapa Cartagena, PhD</h3>
+      <p>Co-Founder & Principal Scientist</p>
+    </div>
 
-  <div class="leader">
-    <h3>Dr. Maryam Salehi, PhD</h3>
-    <p>
-      Co-Founder & Scientific Director. Specialist in environmental
-      engineering, water and wastewater treatment, and microplastics
-      fate and transport with strong experience in applied research
-      and academic–industry collaboration.
-    </p>
+    <div class="card">
+      <img src="Maryam.png" alt="Maryam">
+      <h3>Maryam Salehi, PhD</h3>
+      <p>Co-Founder & Research Director</p>
+    </div>
   </div>
 </section>
 
-<!-- PRODUCTS / SERVICES -->
+<!-- PRODUCTS -->
 <section id="products">
   <h2>Products & Services</h2>
-
-  <p>
-    At SEALLC, we provide specialized technical, analytical, and training
-    services focused on microplastics and nanoplastics in environmental
-    and biological samples.
-  </p>
-
-  <ul class="products">
-    <li>Microplastics and nanoplastics analysis</li>
-    <li>Method development and validation</li>
-    <li>Treatment process evaluation and optimization</li>
-    <li>Laboratory training and technical workshops</li>
-    <li>Research design and data interpretation support</li>
-    <li>Toxicology and regulatory consulting for environmental,
-        biological, and medical device applications</li>
+  <ul>
+    <li>Microplastics & Nanoplastics Analysis</li>
+    <li>Method Development & Validation</li>
+    <li>Treatment Optimization Consulting</li>
+    <li>Laboratory Training & QA/QC Support</li>
+    <li>Research & Regulatory Support</li>
   </ul>
 </section>
 
 <!-- NEWS -->
 <section id="news">
   <h2>News</h2>
-  <p>
-    Updates, publications, and announcements will be posted here.
-  </p>
+  <p>Content coming soon.</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>
-    Contact information and inquiry forms will be added here.
-  </p>
+  <p>Contact information coming soon.</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Science & Engineering Solutions, LLC. All rights reserved.
+  © 2026 Science & Engineering Solutions, LLC
 </footer>
 
 </body>
