@@ -1,205 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science & Engineering Solutions, LLC</title>
 
-<title>Science & Engineering Solutions, LLC</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Open Sans", Arial, sans-serif;
+      color: #212529;
+      background-color: #f8f9fa;
+      line-height: 1.7;
+    }
 
-<style>
-body {
-    margin: 0;
-    font-family: "Open Sans", Arial, sans-serif;
-    color: #212529;
-    background-color: #f8f9fa;
-    line-height: 1.7;
-}
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #0b3c5d;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
 
-/* NAVBAR */
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #0b3c5d;
-    padding: 15px 40px;
-    z-index: 1000;
-}
+    nav ul {
+      margin: 0;
+      padding: 0 40px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      height: 64px;
+    }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 25px;
-}
+    nav li {
+      margin-right: 30px;
+    }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
 
-nav a:hover {
-    text-decoration: underline;
-}
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-/* HERO */
-header {
-    background: #0b3c5d;
-    color: white;
-    padding: 140px 20px 100px;
-    text-align: center;
-}
+    /* HEADER */
+    header {
+      background: #0b3c5d;
+      color: white;
+      text-align: center;
+      padding: 140px 20px 100px;
+    }
 
-header h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-header p {
-    font-size: 1.3rem;
-    opacity: 0.9;
-}
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
 
-/* SECTIONS */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 20px;
-}
+    /* SECTIONS */
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 20px;
+    }
 
-section h2 {
-    color: #0b3c5d;
-    font-size: 2.3rem;
-    margin-bottom: 20px;
-}
+    section h2 {
+      color: #0b3c5d;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
 
-/* LEADERSHIP */
-.team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+    }
 
-.card {
-    background: white;
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* FOOTER */
-footer {
-    background: #0b3c5d;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    font-size: 0.9rem;
-}
-</style>
+    footer {
+      background: #0b3c5d;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- NAVIGATION BAR -->
 <nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#leadership">Leadership Team</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#leadership">Leadership Team</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
 <!-- HOME -->
 <header id="home">
-    <h1>Science & Engineering Solutions, LLC</h1>
-    <p>Scientific • Engineering • Research Consulting</p>
+  <h1>Science & Engineering Solutions, LLC</h1>
+  <p>Scientific • Engineering • Research Consulting</p>
 </header>
 
 <!-- ABOUT -->
 <section id="about">
-    <h2>About Us</h2>
+  <h2>About Us</h2>
+  <div class="card">
     <p>
-        Science & Engineering Solutions, LLC (SEALLC) provides specialized
-        scientific, engineering, and research consulting services to industry,
-        academia, and public-sector clients. We focus on delivering data-driven,
-        technically rigorous solutions to complex environmental and analytical
-        challenges.
+      Science & Engineering Solutions, LLC (SEALLC) provides specialized scientific,
+      engineering, and research consulting services focused on microplastics,
+      nanoplastics, environmental contaminants, and advanced analytical challenges.
     </p>
-
     <p>
-        Our expertise spans microplastics and nanoplastics analysis, advanced
-        analytical method development, treatment optimization, laboratory
-        training, and toxicology consulting for environmental, biological, and
-        medical-device related applications.
+      We support environmental laboratories, water and wastewater utilities,
+      academic institutions, and industry partners with technically rigorous,
+      data-driven solutions.
     </p>
+  </div>
 </section>
 
 <!-- LEADERSHIP -->
 <section id="leadership">
-    <h2>Leadership Team</h2>
-
-    <div class="team">
-        <div class="card">
-            <h3>Founder & Principal Scientist</h3>
-            <p>
-                PhD-level scientist with more than a decade of academic and
-                applied research experience in environmental chemistry,
-                toxicology, and emerging contaminants.
-            </p>
-            <p>
-                Extensive background in microplastics analysis, LC-MS/MS,
-                HRMS, Py-GC/MS, method validation, and regulatory-focused
-                research.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Scientific & Engineering Advisors</h3>
-            <p>
-                SEALLC collaborates with a network of academic researchers,
-                engineers, and analytical laboratories to provide multidisciplinary
-                solutions tailored to client needs.
-            </p>
-        </div>
-    </div>
+  <h2>Leadership Team</h2>
+  <div class="card">
+    <p>
+      Our leadership combines extensive experience in environmental chemistry,
+      toxicology, mass spectrometry, and regulatory science.
+    </p>
+    <p>
+      The team has led method development, validation, and consulting efforts across
+      environmental, biological, and medical-device-related applications.
+    </p>
+  </div>
 </section>
 
 <!-- PRODUCTS -->
 <section id="products">
-    <h2>Products & Services</h2>
+  <h2>Products & Services</h2>
+  <div class="card">
     <ul>
-        <li>Microplastics & nanoplastics analysis (environmental & biological samples)</li>
-        <li>Analytical method development and validation</li>
-        <li>Water and wastewater treatment optimization</li>
-        <li>Laboratory training and technical workshops</li>
-        <li>Toxicology and risk-assessment consulting</li>
-        <li>Research design and grant support</li>
+      <li>Microplastics & Nanoplastics Analysis</li>
+      <li>Analytical Method Development & Validation</li>
+      <li>Laboratory Training & Technical Workshops</li>
+      <li>Treatment Optimization Consulting</li>
+      <li>Environmental & Toxicology Advisory Services</li>
     </ul>
+  </div>
 </section>
 
 <!-- NEWS -->
 <section id="news">
-    <h2>News</h2>
-    <p>
-        Updates, publications, and announcements will be posted here.
-    </p>
+  <h2>News</h2>
+  <div class="card">
+    <p>News content coming soon.</p>
+  </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-    <h2>Contact</h2>
-    <p>
-        Contact information and inquiry forms will be added here.
-    </p>
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Contact information coming soon.</p>
+  </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    © 2026 Science & Engineering Solutions, LLC. All rights reserved.
+  © 2026 Science & Engineering Solutions, LLC
 </footer>
 
 </body>
