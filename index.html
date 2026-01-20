@@ -1,160 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Science & Engineering Solutions, LLC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-:root {
-  --blue-dark: #0b3c5d;
-  --blue-overlay: rgba(11,60,93,0.75);
-}
+  <title>Science & Engineering Solutions, LLC</title>
 
-body {
-  margin: 0;
-  font-family: "Open Sans", Arial, sans-serif;
-  color: #212529;
-  background: #f8f9fa;
-}
+  <style>
+    /* RESET */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* ---------- NAVIGATION ---------- */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: var(--blue-dark);
-  padding: 14px 40px;
-  z-index: 1000;
-}
+    body {
+      font-family: "Open Sans", Arial, sans-serif;
+      color: #212529;
+      background-color: #f8f9fa;
+    }
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 36px;
-}
+    /* =========================
+       TOP NAVIGATION
+    ========================== */
+    .top-nav {
+      background: #0b3c5d;
+      height: 80px;
+    }
 
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1.05rem;
-  font-weight: 600;
-}
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
 
-nav a:hover {
-  text-decoration: underline;
-}
+    .logo img {
+      height: 52px;
+      width: auto;
+    }
 
-/* ---------- HERO ---------- */
-.hero {
-  min-height: 90vh;
-  background:
-    linear-gradient(var(--blue-overlay), var(--blue-overlay)),
-    url("image-1.png") center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 120px 20px 60px;
-}
+    nav {
+      display: flex;
+      gap: 32px;
+    }
 
-.hero-content {
-  max-width: 900px;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+    }
 
-.hero img {
-  max-width: 180px;
-  height: auto;
-  margin-bottom: 28px;
-}
+    nav a:hover {
+      border-bottom: 2px solid white;
+      padding-bottom: 4px;
+    }
 
-.hero h1 {
-  color: #ffffff;
-  font-size: 3rem;
-  margin: 0 0 16px;
-}
+    /* =========================
+       HERO SECTION
+    ========================== */
+    .hero {
+      background:
+        linear-gradient(rgba(11, 60, 93, 0.75), rgba(11, 60, 93, 0.75)),
+        url("image-1.png") center / cover no-repeat;
+      text-align: center;
+      padding: 100px 20px 90px;
+    }
 
-.hero p {
-  color: #e9ecef;
-  font-size: 1.3rem;
-  margin: 0;
-}
+    .hero h1 {
+      color: white;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
 
-/* ---------- SECTIONS ---------- */
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 80px 20px;
-}
+    .hero p {
+      color: #e6f2f8;
+      font-size: 1.3rem;
+    }
 
-section h2 {
-  color: var(--blue-dark);
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-}
+    /* =========================
+       SECTIONS
+    ========================== */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
 
-section p {
-  font-size: 1.05rem;
-  line-height: 1.75;
-}
+    h2 {
+      font-size: 2.2rem;
+      color: #0b3c5d;
+      margin-bottom: 20px;
+    }
 
-/* ---------- FOOTER ---------- */
-footer {
-  background: var(--blue-dark);
-  color: #ffffff;
-  text-align: center;
-  padding: 25px 15px;
-  font-size: 0.9rem;
-}
-</style>
+    p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* =========================
+       LEADERSHIP
+    ========================== */
+    .leadership {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .leader {
+      background: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .leader img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .leader h3 {
+      margin-bottom: 8px;
+      color: #0b3c5d;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+    footer {
+      background: #0b3c5d;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#leadership">Leadership Team</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+  <!-- NAVIGATION -->
+  <header class="top-nav">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="Logo-1.png" alt="SES Logo">
+      </div>
 
-<!-- HERO -->
-<header class="hero" id="home">
-  <div class="hero-content">
-    <img src="Logo-1.png" alt="Science & Engineering Solutions Logo">
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#leadership">Leadership Team</a>
+        <a href="#products">Products</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
     <h1>Science & Engineering Solutions, LLC</h1>
     <p>Scientific • Engineering • Research Consulting</p>
-  </div>
-</header>
+  </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>Advancing Microplastics and Nanoplastics Analysis</h2>
-  <p>
-    At SEALLC, we provide specialized technical, analytical, and training services
-    focused on microplastics and nanoplastics in environmental and biological samples.
-    Our mission is to empower water and wastewater utilities, research groups,
-    and analytical laboratories with reliable data and practical solutions.
-  </p>
-</section>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Science & Engineering Solutions, LLC provides specialized scientific,
+      engineering, and analytical consulting services with a focus on
+      environmental systems, emerging contaminants, and advanced analytical
+      methodologies. Our mission is to deliver practical, science-driven
+      solutions to complex technical challenges.
+    </p>
+  </section>
 
-<!-- PLACEHOLDERS -->
-<section id="leadership"><h2>Leadership Team</h2></section>
-<section id="products"><h2>Products</h2></section>
-<section id="news"><h2>News</h2></section>
-<section id="contact"><h2>Contact</h2></section>
+  <!-- LEADERSHIP -->
+  <section id="leadership">
+    <h2>Leadership Team</h2>
 
-<footer>
-  © 2026 Science & Engineering Solutions, LLC
-</footer>
+    <div class="leadership">
+      <div class="leader">
+        <img src="Alex.jpeg" alt="Alex">
+        <h3>Alexander Ccanccapa Cartagena, PhD</h3>
+        <p>Founder & Scientific Director</p>
+      </div>
+
+      <div class="leader">
+        <img src="Maryam.png" alt="Maryam">
+        <h3>Maryam Salehi, PhD</h3>
+        <p>Co-Founder & Engineering Director</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <h2>Products</h2>
+    <p>
+      Our offerings include analytical method development, laboratory consulting,
+      microplastics and nanoplastics analysis, data interpretation, and customized
+      technical solutions tailored to client needs.
+    </p>
+  </section>
+
+  <!-- NEWS -->
+  <section id="news">
+    <h2>News</h2>
+    <p>Content coming soon.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Content coming soon.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Science & Engineering Solutions, LLC. All rights reserved.
+  </footer>
 
 </body>
 </html>
