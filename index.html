@@ -1,218 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Science & Engineering Solutions, LLC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: #212529;
-      background-color: #f8f9fa;
-      line-height: 1.7;
-    }
+<title>Science & Engineering Solutions, LLC</title>
 
-    /* NAVIGATION */
-    nav {
-      background: #0b3c5d;
-      padding: 15px 30px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #212529;
+    background-color: #f8f9fa;
+    line-height: 1.7;
+}
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 25px;
-      align-items: center;
-    }
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0b3c5d;
+    padding: 15px 40px;
+    z-index: 1000;
+}
 
-    nav ul li a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
 
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-    /* HEADER */
-    header {
-      background: #0b3c5d;
-      color: white;
-      text-align: center;
-      padding: 90px 20px;
-    }
+nav a:hover {
+    text-decoration: underline;
+}
 
-    header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 10px;
-    }
+/* HERO */
+header {
+    background: #0b3c5d;
+    color: white;
+    padding: 140px 20px 100px;
+    text-align: center;
+}
 
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
 
-    /* SECTIONS */
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 70px 20px;
-    }
+header p {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
 
-    section h2 {
-      color: #0b3c5d;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
 
-    /* LEADERSHIP */
-    .leader {
-      margin-bottom: 40px;
-    }
+section h2 {
+    color: #0b3c5d;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
 
-    .leader h3 {
-      margin-bottom: 5px;
-      color: #0b3c5d;
-    }
+/* LEADERSHIP */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
 
-    /* PRODUCTS */
-    ul.products {
-      padding-left: 20px;
-    }
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-    /* FOOTER */
-    footer {
-      background: #0b3c5d;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
-    }
-  </style>
+/* FOOTER */
+footer {
+    background: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+</style>
 </head>
 
 <body>
 
 <!-- NAVIGATION -->
 <nav>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#leadership">Leadership Team</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#news">News</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#leadership">Leadership Team</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
 <!-- HOME -->
 <header id="home">
-  <h1>Science & Engineering Solutions, LLC</h1>
-  <p>Scientific • Engineering • Research Consulting</p>
+    <h1>Science & Engineering Solutions, LLC</h1>
+    <p>Scientific • Engineering • Research Consulting</p>
 </header>
 
 <!-- ABOUT -->
 <section id="about">
-  <h2>About Us</h2>
-  <p>
-    Science & Engineering Solutions, LLC (SEALLC) provides scientific,
-    engineering, and research consulting services to industry, academia,
-    and public-sector clients. Our work delivers data-driven,
-    technically rigorous solutions to complex environmental and
-    analytical challenges.
-  </p>
+    <h2>About Us</h2>
+    <p>
+        Science & Engineering Solutions, LLC (SEALLC) provides specialized
+        scientific, engineering, and research consulting services to industry,
+        academia, and public-sector clients. We focus on delivering data-driven,
+        technically rigorous solutions to complex environmental and analytical
+        challenges.
+    </p>
 
-  <p>
-    With more than a decade of academic research experience in
-    microplastics and emerging chemicals of concern, we witnessed
-    firsthand the growing challenges faced by industry and by water
-    and wastewater utilities in addressing microplastic pollution
-    and its potential impacts on water and food safety.
-  </p>
-
-  <p>
-    As regulatory interest intensified and the need for reliable
-    analytical methods increased, it became clear that a gap existed
-    between cutting-edge scientific knowledge and the practical tools
-    available to environmental professionals and industries.
-  </p>
+    <p>
+        Our expertise spans microplastics and nanoplastics analysis, advanced
+        analytical method development, treatment optimization, laboratory
+        training, and toxicology consulting for environmental, biological, and
+        medical-device related applications.
+    </p>
 </section>
 
 <!-- LEADERSHIP -->
 <section id="leadership">
-  <h2>Leadership Team</h2>
+    <h2>Leadership Team</h2>
 
-  <div class="leader">
-    <h3>Dr. Alexander Ccanccapa Cartagena, PhD</h3>
-    <p>
-      Founder & Principal Scientist. Expert in environmental toxicology,
-      analytical chemistry, and mass spectrometry with extensive experience
-      in microplastics, emerging contaminants, method development,
-      and regulatory-oriented research.
-    </p>
-  </div>
+    <div class="team">
+        <div class="card">
+            <h3>Founder & Principal Scientist</h3>
+            <p>
+                PhD-level scientist with more than a decade of academic and
+                applied research experience in environmental chemistry,
+                toxicology, and emerging contaminants.
+            </p>
+            <p>
+                Extensive background in microplastics analysis, LC-MS/MS,
+                HRMS, Py-GC/MS, method validation, and regulatory-focused
+                research.
+            </p>
+        </div>
 
-  <div class="leader">
-    <h3>Dr. Maryam Salehi, PhD</h3>
-    <p>
-      Co-Founder & Scientific Director. Specialist in environmental
-      engineering, water and wastewater treatment, and microplastics
-      fate and transport with strong experience in applied research
-      and academic–industry collaboration.
-    </p>
-  </div>
+        <div class="card">
+            <h3>Scientific & Engineering Advisors</h3>
+            <p>
+                SEALLC collaborates with a network of academic researchers,
+                engineers, and analytical laboratories to provide multidisciplinary
+                solutions tailored to client needs.
+            </p>
+        </div>
+    </div>
 </section>
 
-<!-- PRODUCTS / SERVICES -->
+<!-- PRODUCTS -->
 <section id="products">
-  <h2>Products & Services</h2>
-
-  <p>
-    At SEALLC, we provide specialized technical, analytical, and training
-    services focused on microplastics and nanoplastics in environmental
-    and biological samples.
-  </p>
-
-  <ul class="products">
-    <li>Microplastics and nanoplastics analysis</li>
-    <li>Method development and validation</li>
-    <li>Treatment process evaluation and optimization</li>
-    <li>Laboratory training and technical workshops</li>
-    <li>Research design and data interpretation support</li>
-    <li>Toxicology and regulatory consulting for environmental,
-        biological, and medical device applications</li>
-  </ul>
+    <h2>Products & Services</h2>
+    <ul>
+        <li>Microplastics & nanoplastics analysis (environmental & biological samples)</li>
+        <li>Analytical method development and validation</li>
+        <li>Water and wastewater treatment optimization</li>
+        <li>Laboratory training and technical workshops</li>
+        <li>Toxicology and risk-assessment consulting</li>
+        <li>Research design and grant support</li>
+    </ul>
 </section>
 
-<!-- NEWS -->
-<section id="news">
-  <h2>News</h2>
-  <p>
-    Updates, publications, and announcements will be posted here.
-  </p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    Contact information and inquiry forms will be added here.
-  </p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Science & Engineering Solutions, LLC. All rights reserved.
-</footer>
-
-</body>
-</html>
+<!-- NEWS -
