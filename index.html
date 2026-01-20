@@ -1,204 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Science & Engineering Solutions, LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Lora:400,700|Open+Sans:300,400,600,700" rel="stylesheet">
-
   <style>
     body {
-      font-family: "Lora", serif;
       margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
       color: #212529;
       background-color: #f8f9fa;
       line-height: 1.7;
     }
+
+    /* NAVIGATION */
+    nav {
+      background: #0b3c5d;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
     header {
       background: #0b3c5d;
       color: white;
-      padding: 90px 20px;
       text-align: center;
+      padding: 90px 20px;
     }
-    header img {
-      max-width: 140px;
-      margin-bottom: 20px;
-    }
+
     header h1 {
-      font-family: "Open Sans", sans-serif;
       font-size: 2.8rem;
       margin-bottom: 10px;
     }
+
     header p {
       font-size: 1.2rem;
       opacity: 0.9;
     }
+
+    /* SECTIONS */
     section {
-      max-width: 900px;
+      max-width: 1100px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
-    h2 {
-      font-family: "Open Sans", sans-serif;
+
+    section h2 {
+      color: #0b3c5d;
       font-size: 2rem;
       margin-bottom: 20px;
+    }
+
+    /* LEADERSHIP */
+    .leader {
+      margin-bottom: 40px;
+    }
+
+    .leader h3 {
+      margin-bottom: 5px;
       color: #0b3c5d;
     }
-    h3 {
-      font-family: "Open Sans", sans-serif;
-      margin-top: 40px;
-      color: #0b3c5d;
-    }
-    ul {
+
+    /* PRODUCTS */
+    ul.products {
       padding-left: 20px;
     }
-    .cta {
+
+    /* FOOTER */
+    footer {
       background: #0b3c5d;
       color: white;
       text-align: center;
-      padding: 60px 20px;
-    }
-    .cta a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #5cb85c;
-      color: white;
-      text-decoration: none;
-      font-family: "Open Sans", sans-serif;
-      font-weight: 600;
-      border-radius: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 30px;
+      padding: 25px;
       font-size: 0.9rem;
-      color: #666;
-    }
-    .bio {
-      margin-top: 30px;
-    }
-    .bio a {
-      color: #0b3c5d;
-      font-weight: 600;
-      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <!-- LOGO #2 -->
-  <img src="logo2.png" alt="Science & Engineering Solutions Logo">
+<!-- NAVIGATION -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#leadership">Leadership Team</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HOME -->
+<header id="home">
   <h1>Science & Engineering Solutions, LLC</h1>
   <p>Scientific • Engineering • Research Consulting</p>
 </header>
 
-<section>
-  <h2>Advancing Microplastics and Nanoplastics Analysis</h2>
-  <p>
-    At SEALLC, we provide specialized technical, analytical, and training services focused on microplastics and nanoplastics in environmental and biological samples.
-    Our mission is to empower water and wastewater utilities, research groups, and analytical laboratories with the tools and expertise needed to accurately detect,
-    quantify, and reduce microplastic pollution.
-  </p>
-  <p>
-    By combining advanced analytical methodologies, consulting support, and partnerships with trusted laboratories,
-    we deliver high-quality data and practical solutions that improve treatment efficiency and strengthen environmental stewardship.
-  </p>
-</section>
-
-<section>
+<!-- ABOUT -->
+<section id="about">
   <h2>About Us</h2>
   <p>
-    With more than a decade of academic research in microplastics and emerging chemicals of concern, we witnessed firsthand the growing challenges faced by industry,
-    water utilities, and regulators in addressing microplastic pollution and its impacts on water and food safety.
+    Science & Engineering Solutions, LLC (SEALLC) provides scientific,
+    engineering, and research consulting services to industry, academia,
+    and public-sector clients. Our work delivers data-driven,
+    technically rigorous solutions to complex environmental and
+    analytical challenges.
   </p>
+
   <p>
-    As regulatory interest intensified and the demand for reliable analytical methods increased, it became clear that a gap existed between cutting-edge scientific
-    research and the practical tools available to environmental professionals.
+    With more than a decade of academic research experience in
+    microplastics and emerging chemicals of concern, we witnessed
+    firsthand the growing challenges faced by industry and by water
+    and wastewater utilities in addressing microplastic pollution
+    and its potential impacts on water and food safety.
   </p>
+
   <p>
-    SEALLC was founded to bridge that gap by delivering scientifically rigorous, transparent, and actionable solutions that support informed decision-making,
-    regulatory readiness, and environmental protection.
+    As regulatory interest intensified and the need for reliable
+    analytical methods increased, it became clear that a gap existed
+    between cutting-edge scientific knowledge and the practical tools
+    available to environmental professionals and industries.
   </p>
 </section>
 
-<section>
-  <h2>Leadership</h2>
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <h2>Leadership Team</h2>
 
-  <div class="bio">
-    <h3>Dr. Maryam Salehi – President</h3>
+  <div class="leader">
+    <h3>Dr. Alexander Ccanccapa Cartagena, PhD</h3>
     <p>
-      Dr. Salehi holds a Ph.D. in Civil and Environmental Engineering from Purdue University and is a leading expert in microplastics research.
-      Her work spans polymer characterization, contaminant fate and transport, water and wastewater treatment,
-      and the development of advanced analytical methods for micro- and nanoplastics.
-    </p>
-    <p>
-      Her expertise includes microplastic degradation, stormwater and coastal transport, potable reuse systems,
-      agricultural soils, and sampling strategy optimization, providing the scientific foundation for SEALLC’s services.
-    </p>
-    <p>
-      <a href="https://scholar.google.com" target="_blank">Google Scholar Profile</a>
+      Founder & Principal Scientist. Expert in environmental toxicology,
+      analytical chemistry, and mass spectrometry with extensive experience
+      in microplastics, emerging contaminants, method development,
+      and regulatory-oriented research.
     </p>
   </div>
 
-  <div class="bio">
-    <h3>Dr. Alex Ccanccapa – Scientific Director</h3>
+  <div class="leader">
+    <h3>Dr. Maryam Salehi, PhD</h3>
     <p>
-      Dr. Ccanccapa brings over ten years of experience in advanced mass spectrometry and spectroscopy,
-      including LC-MS/MS, LC-QTOF, Py-GC/MS, ICP-OES, and FTIR.
-      His expertise centers on method development, validation, and regulatory-ready data generation.
-    </p>
-    <p>
-      His work spans clinical toxicology, extractables and leachables for medical devices,
-      pharmaceuticals, personal care products, pesticides, microplastics, and trace metals
-      across environmental, biological, and medical-device matrices under rigorous QA/QC and GLP/GMP frameworks.
-    </p>
-    <p>
-      <a href="https://scholar.google.com" target="_blank">Google Scholar Profile</a>
+      Co-Founder & Scientific Director. Specialist in environmental
+      engineering, water and wastewater treatment, and microplastics
+      fate and transport with strong experience in applied research
+      and academic–industry collaboration.
     </p>
   </div>
 </section>
 
-<section>
-  <h2>Services</h2>
+<!-- PRODUCTS / SERVICES -->
+<section id="products">
+  <h2>Products & Services</h2>
 
-  <h3>Technical Consulting</h3>
-  <ul>
-    <li>Microplastics sampling plan development for water, wastewater, stormwater, and environmental systems</li>
-    <li>Analytical method development and validation for micro- and nanoplastics quantification</li>
-    <li>Polymer identification and size-distribution analysis</li>
-    <li>Optimization of microplastic removal in drinking water and wastewater treatment systems</li>
-    <li>Evaluation of microplastic fate and transport in potable reuse systems</li>
-  </ul>
-
-  <h3>Education & Training</h3>
   <p>
-    We provide customized, hands-on training programs and workshops designed for utilities,
-    laboratories, and research groups seeking expertise in microplastics analysis.
+    At SEALLC, we provide specialized technical, analytical, and training
+    services focused on microplastics and nanoplastics in environmental
+    and biological samples.
   </p>
 
-  <ul>
-    <li>Extraction of microplastics from water, wastewater, air, soil, sludge, and biological samples</li>
-    <li>Optical and fluorescence microscopy</li>
-    <li>µ-FTIR and µ-Raman spectroscopy</li>
-    <li>Py-GC/MS for polymer identification and quantification</li>
-    <li>Quality assurance and quality control for microplastic analysis</li>
+  <ul class="products">
+    <li>Microplastics and nanoplastics analysis</li>
+    <li>Method development and validation</li>
+    <li>Treatment process evaluation and optimization</li>
+    <li>Laboratory training and technical workshops</li>
+    <li>Research design and data interpretation support</li>
+    <li>Toxicology and regulatory consulting for environmental,
+        biological, and medical device applications</li>
   </ul>
 </section>
 
-<section class="cta">
-  <h2>Ready to Work With Us?</h2>
+<!-- NEWS -->
+<section id="news">
+  <h2>News</h2>
   <p>
-    Contact us today to begin improving your microplastics monitoring,
-    analytical capabilities, and treatment performance.
+    Updates, publications, and announcements will be posted here.
   </p>
-  <a href="mailto:info@seallc.com">Contact SEALLC</a>
 </section>
 
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    Contact information and inquiry forms will be added here.
+  </p>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 Science & Engineering Solutions, LLC
+  © 2026 Science & Engineering Solutions, LLC. All rights reserved.
 </footer>
 
 </body>
