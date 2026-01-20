@@ -5,266 +5,251 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Science & Engineering Solutions, LLC</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
-body {
-    margin: 0;
-    font-family: "Open Sans", Arial, sans-serif;
-    color: #1f2d3d;
-    line-height: 1.7;
-    background-color: #f8f9fa;
+:root{
+  --navy:#0b3c5d;
+  --navy-dark:#082c44;
+  --accent:#1fa2c9;
 }
 
-/* NAVIGATION */
-nav {
-    background: #0b3c5d;
-    display: flex;
-    align-items: center;
-    padding: 14px 40px;
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family: "Open Sans", Arial, sans-serif;
+  color:#1f2933;
+  line-height:1.7;
+  background:#ffffff;
 }
 
-nav img {
-    height: 52px;
-    margin-right: 40px;
+/* NAVBAR */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:1000;
+  background:var(--navy);
+  display:flex;
+  align-items:center;
+  padding:12px 40px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-    margin: 0;
-    padding: 0;
+nav img{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  object-fit:contain;
+  background:transparent;
 }
 
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
+nav ul{
+  list-style:none;
+  display:flex;
+  margin-left:auto;
+  gap:34px;
+  padding:0;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:600;
+  font-size:16px;
 }
+
+nav a:hover{color:#d9f2ff}
 
 /* HERO */
-.hero {
-    position: relative;
-    background: 
-        linear-gradient(rgba(11,60,93,0.78), rgba(11,60,93,0.78)),
-        url("image-1.png") center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
+.hero{
+  margin-top:120px;
+  height:520px;
+  background:
+    linear-gradient(rgba(11,60,93,.65),rgba(11,60,93,.65)),
+    url("image-1.png") center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:0 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.hero h1{
+  font-size:52px;
+  margin-bottom:10px;
 }
 
-.hero p {
-    font-size: 1.3rem;
-    opacity: 0.95;
+.hero p{
+  font-size:20px;
+  opacity:.95;
 }
 
 /* SECTIONS */
-section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 80px 20px;
+section{
+  max-width:1100px;
+  margin:80px auto;
+  padding:0 25px;
 }
 
-section h2 {
-    font-size: 2.2rem;
-    margin-bottom: 25px;
-    color: #0b3c5d;
-}
-
-.card {
-    background: white;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+section h2{
+  color:var(--navy);
+  font-size:34px;
+  margin-bottom:20px;
 }
 
 /* LEADERSHIP */
-.leaders {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+.team{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  margin-top:40px;
 }
 
-.leader img {
-    width: 140px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+.member{
+  text-align:center;
 }
 
-.scholar {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 14px;
-    background: #0b3c5d;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9rem;
+.member img{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:20px;
 }
 
-/* SERVICES */
-ul {
-    padding-left: 20px;
+.member h3{
+  font-size:24px;
+  margin:0;
 }
 
-footer {
-    background: #0b3c5d;
-    color: white;
-    text-align: center;
-    padding: 30px;
+.member h4{
+  color:var(--navy);
+  margin:8px 0 18px;
+}
+
+.member p{
+  text-align:left;
+  font-size:16px;
+}
+
+.scholar{
+  display:inline-block;
+  margin-top:20px;
+  padding:10px 18px;
+  background:var(--navy);
+  color:white;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.scholar:hover{background:var(--navy-dark)}
+
+/* FOOTER */
+footer{
+  background:#f4f6f8;
+  padding:30px;
+  text-align:center;
+  font-size:14px;
+  color:#555;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
-    <img src="Logo-1.png" alt="SES Logo">
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#leadership">Leadership Team</a></li>
-        <li><a href="#services">Products & Services</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+  <img src="Logo-1.png" alt="SES Logo">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#leadership">Leadership Team</a></li>
+    <li><a href="#services">Products & Services</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<!-- HERO -->
 <div class="hero" id="home">
-    <h1>Science & Engineering Solutions, LLC</h1>
-    <p>Scientific • Engineering • Research Consulting</p>
+  <h1>Science & Engineering Solutions, LLC</h1>
+  <p>Scientific • Engineering • Research Consulting</p>
 </div>
 
-<!-- HOME CONTENT -->
-<section>
-    <div class="card">
-        <h2>Advancing Microplastics and Nanoplastics Analysis</h2>
-        <p>
-            At Science & Engineering Solutions, LLC, we provide specialized technical,
-            analytical, and training services focused on microplastics and nanoplastics
-            in environmental and biological samples.
-        </p>
-        <p>
-            Our mission is to empower water and wastewater utilities, research groups,
-            and analytical laboratories with the tools and expertise needed to accurately
-            detect, quantify, and reduce microplastic pollution.
-        </p>
-    </div>
-</section>
-
-<!-- ABOUT -->
 <section id="about">
-    <div class="card">
-        <h2>About Us</h2>
-        <p>
-            With more than a decade of academic research in microplastics, we witnessed
-            firsthand the growing challenges faced by industry and water and wastewater
-            utilities in addressing microplastic pollution and its impacts on water and
-            food safety.
-        </p>
-        <p>
-            Our company was founded to bridge the gap between cutting-edge scientific
-            research and practical, defensible analytical tools needed for regulatory
-            readiness and environmental protection.
-        </p>
-        <p>
-            Our values are rooted in scientific integrity, innovation, collaboration,
-            and service—delivering evidence-based solutions for a cleaner, safer future.
-        </p>
-    </div>
+<h2>About Us</h2>
+<p>
+Science & Engineering Solutions, LLC (SEALLC) is a specialized consulting and research firm focused on advancing analytical science, environmental engineering, and applied research. With deep expertise in microplastics, nanoplastics, emerging contaminants, and advanced analytical methods, we support government agencies, utilities, research institutions, and private laboratories in solving complex scientific challenges.
+</p>
+<p>
+Our mission is to bridge cutting-edge research with practical, defensible solutions that improve environmental protection, public health, and regulatory decision-making.
+</p>
 </section>
 
-<!-- LEADERSHIP -->
 <section id="leadership">
-    <h2>Leadership Team</h2>
-    <div class="leaders">
+<h2>Leadership Team</h2>
 
-        <div class="card leader">
-            <img src="Maryam.png" alt="Maryam Salehi">
-            <h3>Dr. Maryam Salehi</h3>
-            <strong>President</strong>
-            <p>
-                Dr. Salehi holds a Ph.D. in Civil and Environmental Engineering from Purdue
-                University and is a leading expert in microplastics research with over a
-                decade of experience in polymers, contaminant fate and transport, and
-                water and wastewater treatment.
-            </p>
-            <a class="scholar" href="https://scholar.google.com" target="_blank">
-                Google Scholar
-            </a>
-        </div>
+<div class="team">
 
-        <div class="card leader">
-            <img src="Alex.jpeg" alt="Alexander Ccanccapa-Cartagena">
-            <h3>Dr. Alexander Ccanccapa-Cartagena</h3>
-            <strong>Scientific Director</strong>
-            <p>
-                Dr. Ccanccapa-Cartagena is an environmental toxicologist and analytical
-                scientist with extensive experience in microplastics, emerging
-                contaminants, and advanced mass spectrometry techniques for
-                environmental and biological matrices.
-            </p>
-            <a class="scholar" href="https://scholar.google.com" target="_blank">
-                Google Scholar
-            </a>
-        </div>
+<div class="member">
+  <img src="Maryam.png" alt="Dr. Maryam Salehi">
+  <h3>Dr. Maryam Salehi</h3>
+  <h4>President</h4>
+  <p>
+Dr. Salehi holds a Ph.D. in Civil and Environmental Engineering from Purdue University and is a recognized leader in microplastics and polymer research. Her work spans contaminant fate and transport, polymer characterization, wastewater and drinking water treatment, and method development for emerging pollutants.
+  </p>
+  <p>
+Dr. Salehi has led multidisciplinary research programs, collaborated with federal and state agencies, and published extensively in peer-reviewed journals. Her leadership ensures scientific rigor, innovation, and strategic vision across all SEALLC projects.
+  </p>
+  <a class="scholar" href="https://scholar.google.com/citations?user=I8M0ltUAAAAJ&hl=en" target="_blank">
+    Google Scholar
+  </a>
+</div>
 
-    </div>
+<div class="member">
+  <img src="Alex.jpeg" alt="Dr. Alexander Ccanccapa-Cartagena">
+  <h3>Dr. Alexander Ccanccapa-Cartagena</h3>
+  <h4>Scientific Director</h4>
+  <p>
+Dr. Ccanccapa-Cartagena is an environmental toxicologist and analytical scientist with extensive experience in mass spectrometry, microplastics analysis, pharmaceuticals, pesticides, and emerging contaminants across environmental and biological matrices.
+  </p>
+  <p>
+He has developed and validated advanced LC-MS/MS, HRMS, Py-GC/MS, ICP-OES, and FTIR methods, and has led projects supporting regulatory compliance, risk assessment, and method standardization. His expertise bridges analytical chemistry, toxicology, and applied environmental science.
+  </p>
+  <a class="scholar" href="https://scholar.google.com/citations?user=RohAcBgAAAAJ&hl=es" target="_blank">
+    Google Scholar
+  </a>
+</div>
+
+</div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
-    <div class="card">
-        <h2>Products & Services</h2>
-
-        <h3>Technical Consulting</h3>
-        <ul>
-            <li>Sampling plan development for water, wastewater, stormwater, and soils</li>
-            <li>Analytical method development for micro- and nanoplastics</li>
-            <li>Optimization of microplastic removal in drinking water treatment</li>
-            <li>Microplastic fate assessment in wastewater reuse systems</li>
-        </ul>
-
-        <h3>Education & Training</h3>
-        <ul>
-            <li>Extraction of microplastics from water, air, soil, sludge, and biological samples</li>
-            <li>Optical and fluorescence microscopy</li>
-            <li>µ-FTIR, µ-Raman, and Py-GC/MS analysis</li>
-            <li>Quality assurance and quality control for microplastic analysis</li>
-        </ul>
-    </div>
+<h2>Products & Services</h2>
+<p>
+SEALLC provides specialized analytical, consulting, and training services including:
+</p>
+<ul>
+  <li>Microplastics and nanoplastics analysis in environmental and biological samples</li>
+  <li>Advanced mass spectrometry method development and validation</li>
+  <li>Water and wastewater treatment optimization</li>
+  <li>Regulatory and research support for emerging contaminants</li>
+  <li>Laboratory training and technical workshops</li>
+</ul>
 </section>
 
-<!-- NEWS -->
 <section id="news">
-    <div class="card">
-        <h2>News</h2>
-        <p>Content coming soon.</p>
-    </div>
+<h2>News</h2>
+<p>Content coming soon.</p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Contact information and inquiry form coming soon.</p>
-    </div>
+<h2>Contact</h2>
+<p>Contact information coming soon.</p>
 </section>
 
 <footer>
-    © 2026 Science & Engineering Solutions, LLC
+© 2026 Science & Engineering Solutions, LLC
 </footer>
 
 </body>
