@@ -1,237 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Science & Engineering Solutions, LLC</title>
 
-  <title>Science & Engineering Solutions, LLC</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    /* RESET */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: #1f2d3d;
+    line-height: 1.7;
+    background-color: #f8f9fa;
+}
 
-    body {
-      font-family: "Open Sans", Arial, sans-serif;
-      color: #212529;
-      background-color: #f8f9fa;
-    }
+/* NAVIGATION */
+nav {
+    background: #0b3c5d;
+    display: flex;
+    align-items: center;
+    padding: 14px 40px;
+}
 
-    /* =========================
-       TOP NAVIGATION
-    ========================== */
-    .top-nav {
-      background: #0b3c5d;
-      height: 80px;
-    }
+nav img {
+    height: 52px;
+    margin-right: 40px;
+}
 
-    .nav-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 30px;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
 
-    .logo img {
-      height: 52px;
-      width: auto;
-    }
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-    nav {
-      display: flex;
-      gap: 32px;
-    }
+nav ul li a:hover {
+    text-decoration: underline;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-    }
+/* HERO */
+.hero {
+    position: relative;
+    background: 
+        linear-gradient(rgba(11,60,93,0.78), rgba(11,60,93,0.78)),
+        url("image-1.png") center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
 
-    nav a:hover {
-      border-bottom: 2px solid white;
-      padding-bottom: 4px;
-    }
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
 
-    /* =========================
-       HERO SECTION
-    ========================== */
-    .hero {
-      background:
-        linear-gradient(rgba(11, 60, 93, 0.75), rgba(11, 60, 93, 0.75)),
-        url("image-1.png") center / cover no-repeat;
-      text-align: center;
-      padding: 100px 20px 90px;
-    }
+.hero p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
 
-    .hero h1 {
-      color: white;
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
+/* SECTIONS */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
 
-    .hero p {
-      color: #e6f2f8;
-      font-size: 1.3rem;
-    }
+section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #0b3c5d;
+}
 
-    /* =========================
-       SECTIONS
-    ========================== */
-    section {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 20px;
-    }
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
 
-    h2 {
-      font-size: 2.2rem;
-      color: #0b3c5d;
-      margin-bottom: 20px;
-    }
+/* LEADERSHIP */
+.leaders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
 
-    p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-    }
+.leader img {
+    width: 140px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
 
-    /* =========================
-       LEADERSHIP
-    ========================== */
-    .leadership {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
+.scholar {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    background: #0b3c5d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
 
-    .leader {
-      background: white;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      flex: 1;
-      min-width: 280px;
-      text-align: center;
-    }
+/* SERVICES */
+ul {
+    padding-left: 20px;
+}
 
-    .leader img {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 15px;
-    }
-
-    .leader h3 {
-      margin-bottom: 8px;
-      color: #0b3c5d;
-    }
-
-    /* =========================
-       FOOTER
-    ========================== */
-    footer {
-      background: #0b3c5d;
-      color: white;
-      text-align: center;
-      padding: 25px;
-      margin-top: 60px;
-      font-size: 14px;
-    }
-  </style>
+footer {
+    background: #0b3c5d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <header class="top-nav">
-    <div class="nav-container">
-      <div class="logo">
-        <img src="Logo-1.png" alt="SES Logo">
-      </div>
+<!-- NAV -->
+<nav>
+    <img src="Logo-1.png" alt="SES Logo">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#leadership">Leadership Team</a></li>
+        <li><a href="#services">Products & Services</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#leadership">Leadership Team</a>
-        <a href="#products">Products</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero" id="home">
+<!-- HERO -->
+<div class="hero" id="home">
     <h1>Science & Engineering Solutions, LLC</h1>
     <p>Scientific • Engineering • Research Consulting</p>
-  </section>
+</div>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Science & Engineering Solutions, LLC provides specialized scientific,
-      engineering, and analytical consulting services with a focus on
-      environmental systems, emerging contaminants, and advanced analytical
-      methodologies. Our mission is to deliver practical, science-driven
-      solutions to complex technical challenges.
-    </p>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section id="leadership">
-    <h2>Leadership Team</h2>
-
-    <div class="leadership">
-      <div class="leader">
-        <img src="Alex.jpeg" alt="Alex">
-        <h3>Alexander Ccanccapa Cartagena, PhD</h3>
-        <p>Founder & Scientific Director</p>
-      </div>
-
-      <div class="leader">
-        <img src="Maryam.png" alt="Maryam">
-        <h3>Maryam Salehi, PhD</h3>
-        <p>Co-Founder & Engineering Director</p>
-      </div>
+<!-- HOME CONTENT -->
+<section>
+    <div class="card">
+        <h2>Advancing Microplastics and Nanoplastics Analysis</h2>
+        <p>
+            At Science & Engineering Solutions, LLC, we provide specialized technical,
+            analytical, and training services focused on microplastics and nanoplastics
+            in environmental and biological samples.
+        </p>
+        <p>
+            Our mission is to empower water and wastewater utilities, research groups,
+            and analytical laboratories with the tools and expertise needed to accurately
+            detect, quantify, and reduce microplastic pollution.
+        </p>
     </div>
-  </section>
+</section>
 
-  <!-- PRODUCTS -->
-  <section id="products">
-    <h2>Products</h2>
-    <p>
-      Our offerings include analytical method development, laboratory consulting,
-      microplastics and nanoplastics analysis, data interpretation, and customized
-      technical solutions tailored to client needs.
-    </p>
-  </section>
+<!-- ABOUT -->
+<section id="about">
+    <div class="card">
+        <h2>About Us</h2>
+        <p>
+            With more than a decade of academic research in microplastics, we witnessed
+            firsthand the growing challenges faced by industry and water and wastewater
+            utilities in addressing microplastic pollution and its impacts on water and
+            food safety.
+        </p>
+        <p>
+            Our company was founded to bridge the gap between cutting-edge scientific
+            research and practical, defensible analytical tools needed for regulatory
+            readiness and environmental protection.
+        </p>
+        <p>
+            Our values are rooted in scientific integrity, innovation, collaboration,
+            and service—delivering evidence-based solutions for a cleaner, safer future.
+        </p>
+    </div>
+</section>
 
-  <!-- NEWS -->
-  <section id="news">
-    <h2>News</h2>
-    <p>Content coming soon.</p>
-  </section>
+<!-- LEADERSHIP -->
+<section id="leadership">
+    <h2>Leadership Team</h2>
+    <div class="leaders">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Content coming soon.</p>
-  </section>
+        <div class="card leader">
+            <img src="Maryam.png" alt="Maryam Salehi">
+            <h3>Dr. Maryam Salehi</h3>
+            <strong>President</strong>
+            <p>
+                Dr. Salehi holds a Ph.D. in Civil and Environmental Engineering from Purdue
+                University and is a leading expert in microplastics research with over a
+                decade of experience in polymers, contaminant fate and transport, and
+                water and wastewater treatment.
+            </p>
+            <a class="scholar" href="https://scholar.google.com" target="_blank">
+                Google Scholar
+            </a>
+        </div>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2026 Science & Engineering Solutions, LLC. All rights reserved.
-  </footer>
+        <div class="card leader">
+            <img src="Alex.jpeg" alt="Alexander Ccanccapa-Cartagena">
+            <h3>Dr. Alexander Ccanccapa-Cartagena</h3>
+            <strong>Scientific Director</strong>
+            <p>
+                Dr. Ccanccapa-Cartagena is an environmental toxicologist and analytical
+                scientist with extensive experience in microplastics, emerging
+                contaminants, and advanced mass spectrometry techniques for
+                environmental and biological matrices.
+            </p>
+            <a class="scholar" href="https://scholar.google.com" target="_blank">
+                Google Scholar
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+    <div class="card">
+        <h2>Products & Services</h2>
+
+        <h3>Technical Consulting</h3>
+        <ul>
+            <li>Sampling plan development for water, wastewater, stormwater, and soils</li>
+            <li>Analytical method development for micro- and nanoplastics</li>
+            <li>Optimization of microplastic removal in drinking water treatment</li>
+            <li>Microplastic fate assessment in wastewater reuse systems</li>
+        </ul>
+
+        <h3>Education & Training</h3>
+        <ul>
+            <li>Extraction of microplastics from water, air, soil, sludge, and biological samples</li>
+            <li>Optical and fluorescence microscopy</li>
+            <li>µ-FTIR, µ-Raman, and Py-GC/MS analysis</li>
+            <li>Quality assurance and quality control for microplastic analysis</li>
+        </ul>
+    </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+    <div class="card">
+        <h2>News</h2>
+        <p>Content coming soon.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Contact information and inquiry form coming soon.</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Science & Engineering Solutions, LLC
+</footer>
 
 </body>
 </html>
