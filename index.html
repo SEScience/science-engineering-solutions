@@ -1,44 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Science & Engineering Solutions, LLC</title>
+/* HOME CONTENT SECTION */
+.home-content {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 25px;
+  text-align: center;
+}
 
-<link rel="stylesheet" href="style.css">
-</head>
+.home-content h2 {
+  color: var(--navy);
+  font-size: 32px;
+  margin-bottom: 30px;
+}
 
-<body>
+.home-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
-<nav>
-  <a href="index.html" class="logo">
-    <img src="Logo-1.png" alt="SES Logo">
-  </a>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="leadership.html">Leadership Team</a></li>
-    <li><a href="services.html">Products & Services</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+/* CALL TO ACTION */
+.cta {
+  margin-top: 40px;
+}
 
-<header class="hero">
-  <h1>Science & Engineering Solutions, LLC</h1>
-  <p>Scientific • Engineering • Research Consulting</p>
-</header>
+.cta-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background: var(--navy);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
 
-<section>
-  <h2>Welcome</h2>
-  <p>
-  Science & Engineering Solutions (SEScience) delivers high-level scientific consulting and applied research in environmental engineering, analytical chemistry, and emerging contaminants.
-  </p>
-</section>
-
-<footer>
-© 2026 Science & Engineering Solutions, LLC
-</footer>
-
-</body>
-</html>
+.cta-button:hover {
+  background: var(--navy-dark);
+}
