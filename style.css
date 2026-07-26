@@ -4,20 +4,17 @@
   --accent:#1fa2c9;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
-  font-family:"Open Sans", Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   color:#1f2933;
   line-height:1.7;
   background:#ffffff;
 }
 
 /* NAVBAR */
-
 nav{
   position:fixed;
   top:0;
@@ -57,7 +54,6 @@ nav a:hover{
 }
 
 /* HERO */
-
 .hero{
   margin-top:120px;
   height:520px;
@@ -83,32 +79,7 @@ nav a:hover{
   opacity:.95;
 }
 
-/* GENERAL PAGES */
-
-.page{
-  max-width:1100px;
-  margin:170px auto 80px;
-  padding:0 25px;
-}
-
-.page h1{
-  color:var(--navy);
-  font-size:42px;
-  margin-bottom:30px;
-}
-
-.page h2{
-  color:var(--navy);
-  font-size:30px;
-  margin-top:50px;
-}
-
-.page p{
-  font-size:18px;
-}
-
 /* SECTIONS */
-
 section{
   max-width:1100px;
   margin:80px auto;
@@ -122,7 +93,6 @@ section h2{
 }
 
 /* LEADERSHIP */
-
 .team{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -173,44 +143,10 @@ section h2{
 }
 
 /* FOOTER */
-
 footer{
   background:#f4f6f8;
   padding:30px;
   text-align:center;
   font-size:14px;
   color:#555;
-}
-
-/* RESPONSIVE */
-
-@media (max-width:900px){
-
-.team{
-    grid-template-columns:1fr;
-}
-
-nav{
-    flex-direction:column;
-    padding:15px;
-}
-
-nav ul{
-    margin:20px 0 0;
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-.hero h1{
-    font-size:36px;
-}
-
-.hero{
-    height:420px;
-}
-
-.page{
-    margin-top:180px;
-}
-
 }
