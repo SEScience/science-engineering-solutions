@@ -9,6 +9,24 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+
+const menu = document.getElementById("mobile-menu");
+const nav = document.getElementById("nav-links");
+
+if(menu && nav){
+
+    menu.addEventListener("click", function(){
+
+        nav.classList.toggle("show");
+
+        menu.innerHTML = nav.classList.contains("show") ? "✕" : "☰";
+
+    });
+
+}
+
+</script>
 
 <body>
 
