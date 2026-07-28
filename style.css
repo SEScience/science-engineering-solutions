@@ -556,3 +556,20 @@ html{
 scroll-behavior:smooth;
 
 }
+.menu-toggle{
+
+transition:.3s;
+
+}
+
+.menu-toggle:hover{
+
+color:#2CC4FF;
+
+}
+
+.nav-links{
+
+transition:all .35s ease;
+
+}
