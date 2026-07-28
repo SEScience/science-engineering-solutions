@@ -14,6 +14,36 @@ content="Scientific consulting, analytical chemistry, environmental engineering 
 <link rel="stylesheet" href="style.css">
 
 </head>
+  <script>
+
+const menu = document.getElementById("mobile-menu");
+const nav = document.getElementById("nav-links");
+
+menu.addEventListener("click", function () {
+
+    nav.classList.toggle("show");
+
+    if(menu.innerHTML=="☰"){
+        menu.innerHTML="✕";
+    }else{
+        menu.innerHTML="☰";
+    }
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+
+    link.addEventListener("click",()=>{
+
+        nav.classList.remove("show");
+
+        menu.innerHTML="☰";
+
+    });
+
+});
+
+</script>
 
 <body>
 
