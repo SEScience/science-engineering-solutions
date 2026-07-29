@@ -13,8 +13,28 @@ content="Latest scientific news, technical insights and company updates from Sci
 
 <link rel="stylesheet" href="style.css">
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const menu = document.getElementById("mobile-menu");
+const nav = document.getElementById("nav-links");
+
+if (menu && nav) {
+    menu.addEventListener("click", function () {
+        nav.classList.toggle("show");
+        menu.innerHTML = menu.innerHTML == "☰" ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("show");
+            menu.innerHTML = "☰";
+        });
+    });
+}
+});
+</script>
+
 </head>
-  <script>
 
 const menu = document.getElementById("mobile-menu");
 const nav = document.getElementById("nav-links");
@@ -43,8 +63,6 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 
 });
 
-</script>
-
 <body>
 
 <!-- ================= NAVIGATION ================= -->
@@ -55,7 +73,9 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 <img src="Logo Advanced.png" alt="SES Logo">
 </a>
 
-<ul class="nav-links">
+<div class="menu-toggle" id="mobile-menu">☰</div>
+
+<ul class="nav-links" id="nav-links">
 
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
