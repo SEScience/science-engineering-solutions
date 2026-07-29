@@ -13,55 +13,48 @@ content="Latest scientific news, technical insights and company updates from Sci
 
 <link rel="stylesheet" href="style.css">
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const menu = document.getElementById("mobile-menu");
-const nav = document.getElementById("nav-links");
 
-if (menu && nav) {
-    menu.addEventListener("click", function () {
-        nav.classList.toggle("show");
-        menu.innerHTML = menu.innerHTML == "☰" ? "✕" : "☰";
-    });
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("show");
-            menu.innerHTML = "☰";
-        });
-    });
+<style>
+@media (max-width:768px){
+.nav-links{
+display:none!important;
+position:fixed;
+top:0;left:0;
+width:100%;height:100vh;
+background:rgba(8,42,70,.98);
+padding:110px 30px 30px;
+margin:0;
+z-index:1001;
+flex-direction:column;
+overflow:auto;
 }
-});
-</script>
+.nav-links.show{display:flex!important;}
+.menu-toggle{display:block;z-index:1002;position:relative;}
+body.menu-open{overflow:hidden;}
+}
+</style>
 
 </head>
-
-const menu = document.getElementById("mobile-menu");
-const nav = document.getElementById("nav-links");
-
-menu.addEventListener("click", function () {
-
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menu=document.getElementById("mobile-menu");
+  const nav=document.getElementById("nav-links");
+  if(!menu||!nav) return;
+  menu.addEventListener("click",function(){
     nav.classList.toggle("show");
-
-    if(menu.innerHTML=="☰"){
-        menu.innerHTML="✕";
-    }else{
-        menu.innerHTML="☰";
-    }
-
-});
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
+    const open=nav.classList.contains("show");
+    menu.innerHTML=open?"✕":"☰";
+    document.body.classList.toggle("menu-open",open);
+  });
+  document.querySelectorAll(".nav-links a").forEach(link=>{
     link.addEventListener("click",()=>{
-
-        nav.classList.remove("show");
-
-        menu.innerHTML="☰";
-
+      nav.classList.remove("show");
+      document.body.classList.remove("menu-open");
+      menu.innerHTML="☰";
     });
-
+  });
 });
+</script>
 
 <body>
 
@@ -74,7 +67,6 @@ document.querySelectorAll(".nav-links a").forEach(link=>{
 </a>
 
 <div class="menu-toggle" id="mobile-menu">☰</div>
-
 <ul class="nav-links" id="nav-links">
 
 <li><a href="index.html">Home</a></li>
